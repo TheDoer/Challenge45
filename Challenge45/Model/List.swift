@@ -7,30 +7,31 @@
 
 import Foundation
 
-struct DailyWeather: Codable {
-    var dt: Int
-    var temp: Temperature
-    var weather: [WeatherDetail]
+struct List: Codable {
     
-enum CodingKey: String {
+        let dt, sunrise, sunset: Int?
+        let temp: Temp?
+        let feelsLike: FeelsLike?
+        let pressure, humidity: Int?
+        let weather: [Weather]?
+        let speed: Double?
+        let deg: Int?
+        let gust: Double?
+        let clouds: Int?
+        let pop, rain: Double?
     
-    case dt
-    case temp
-    case weather
-}
+    enum CodingKeys: String, CodingKey {
+            case dt, sunrise, sunset, temp
+            case feelsLike = "feels_like"
+            case pressure, humidity, weather, speed, deg, gust, clouds, pop, rain
+        }
     
-    init() {
-        dt = 0
-        temp = Temperature(min: 0.0, max: 0.0)
-        weather = [WeatherDetail(main: "", description: "", icon: "")]
-    
-    }
+//    init() {
+//        dt = 0
+//        temp = Temperature(min: 0.0, max: 0.0)
+//        weather = [WeatherDetail(main: "", description: "", icon: "")]
+//
+//    }
  
 }
 
-extension DailyWeather {
-    var id: UUID {
-        return UUID()
-        
-    }
-}
