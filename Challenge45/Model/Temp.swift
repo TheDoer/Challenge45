@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Temperature: Codable {
-    var min: Double
-    var max: Double
+struct Temp: Codable {
+    let day, min, max, night: Double?
+    let eve, morn: Double?
 }
