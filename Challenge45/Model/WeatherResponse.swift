@@ -8,10 +8,6 @@
 import Foundation
 
 struct WeatherResponse: Codable {
-    var daily: [DailyWeather]
-    
-    static func empty() -> WeatherResponse {
-        return WeatherResponse(daily: [DailyWeather](repeating:DailyWeather(), count: 8))
-    }
+    let list: [List]?
     
 }
