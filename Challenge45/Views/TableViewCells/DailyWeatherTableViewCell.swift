@@ -9,15 +9,37 @@ import UIKit
 
 class DailyWeatherTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+     static let identifier = "DailyWeatherTableViewCell"
+    
+    
+    @IBOutlet weak var weatherImageView: UIImageView!
+    @IBOutlet weak var weatherDate: UILabel!
+    @IBOutlet weak var weatherTemperature: UILabel!
+    
+    func setup(dailyWeatherCellData: List){
+        weatherImageView.contentMode = .scaleAspectFit
+        weatherDate.text = getDayForDate(Date(timeIntervalSince1970: Double(dailyWeatherCellData.dt ?? 0)))
+        weatherTemperature.text = "\(dailyWeatherCellData.temp?.day ?? 0.0 )°"
+        let weatherIcon = dailyWeatherCellData.weather![0].icon
+        
+        if (weatherIcon == "04d"){
+                        self.weatherImageView.image = UIImage(named: "night")
+                    }
+                    else if (weatherIcon == "10d") {
+                        self.weatherImageView.image = UIImage(named: "cloud-lightining")
+                    }
+                    else if (weatherIcon == "03d") {
+                        self.weatherImageView.image = UIImage(named: "cloud-umbrella")
+                    }
+                    else {
+        
+                        self.weatherImageView.image = UIImage(named: "wind")
+        
+                    }
+       
+        
     }
     
 }
+    
+
