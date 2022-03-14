@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Platform45-->
+        <!--Weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="DailyWeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DailyWeatherViewController" customModule="Challenge45" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                             <constraint firstItem="7os-EX-pfl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="s4p-pw-jDD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Platform45" id="8Py-QK-kGz"/>
+                    <navigationItem key="navigationItem" title="Weather" id="8Py-QK-kGz"/>
                     <connections>
                         <outlet property="tableView" destination="7os-EX-pfl" id="mEw-YV-0wC"/>
                     </connections>
@@ -383,7 +383,7 @@
     </scenes>
     <resources>
         <image name="humidity" catalog="system" width="128" height="98"/>
-        <image name="rain" width="120" height="120"/>
+        <image name="rain" width="512" height="512"/>
         <image name="sunrise" catalog="system" width="128" height="97"/>
         <image name="sunset" catalog="system" width="128" height="97"/>
         <image name="wifi.exclamationmark" catalog="system" width="128" height="96"/>
