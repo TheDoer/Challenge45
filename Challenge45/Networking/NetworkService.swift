@@ -19,11 +19,6 @@ struct NetworkService {
         
     }
     
-//    func myfirstRequest(completion: @escaping(Result<[List], Error>) -> Void ){
-//
-//        request(route: .fetchDailyWeather, method: .get, completion: completion)
-//
-//    }
     
     
     
