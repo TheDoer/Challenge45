@@ -30,7 +30,7 @@ func getTimeForDate(_ date: Date?) -> String {
     }
     
     let formatter = DateFormatter()
-    formatter.dateFormat = "EEEE, MMM d" //Saturday, Mar 12
+    formatter.dateFormat = "HH:mm a" //Saturday, Mar 12
     return formatter.string(from: inputDate)
     
     
