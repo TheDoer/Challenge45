@@ -1,0 +1,6 @@
+framework module Pods_Challenge45Tests {
+  umbrella header "Pods-Challenge45Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

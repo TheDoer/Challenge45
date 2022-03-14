@@ -225,14 +225,8 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0656" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJG-Xi-QER">
-                                        <rect key="frame" x="33.666666666666671" y="42.333333333333314" width="57.666666666666671" height="27.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1800" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIK-XQ-brg">
-                                        <rect key="frame" x="225.33333333333334" y="42.333333333333314" width="54.333333333333343" height="27.666666666666671"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0500 AM : 1800PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jw-4i-jLx">
+                                        <rect key="frame" x="57.333333333333329" y="42.333333333333314" width="200.66666666666669" height="27.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -241,20 +235,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="euo-F8-83y" firstAttribute="top" secondItem="4FC-IO-8DP" secondAttribute="top" constant="13" id="0dp-Bf-Vmp"/>
+                                    <constraint firstItem="0jw-4i-jLx" firstAttribute="centerX" secondItem="4FC-IO-8DP" secondAttribute="centerX" id="2A1-CA-gDN"/>
                                     <constraint firstAttribute="trailing" secondItem="0If-Bj-ekb" secondAttribute="trailing" constant="8" id="4CS-MH-ffM"/>
                                     <constraint firstItem="0If-Bj-ekb" firstAttribute="top" secondItem="4FC-IO-8DP" secondAttribute="top" constant="8" id="7vk-Dk-C4p"/>
-                                    <constraint firstItem="NJG-Xi-QER" firstAttribute="leading" secondItem="4FC-IO-8DP" secondAttribute="leading" constant="33.666666666666671" id="8J7-P6-lTQ"/>
                                     <constraint firstItem="Wtt-iX-Zfn" firstAttribute="centerY" secondItem="0If-Bj-ekb" secondAttribute="centerY" id="94o-FJ-dWg"/>
                                     <constraint firstItem="Wtt-iX-Zfn" firstAttribute="top" secondItem="4FC-IO-8DP" secondAttribute="top" constant="13" id="AZw-bW-Bcx"/>
+                                    <constraint firstItem="0jw-4i-jLx" firstAttribute="centerY" secondItem="4FC-IO-8DP" secondAttribute="centerY" id="Dwz-HX-f3N"/>
                                     <constraint firstItem="5nB-7n-leX" firstAttribute="leading" secondItem="4FC-IO-8DP" secondAttribute="leading" constant="8" id="GW7-dP-1xB"/>
-                                    <constraint firstItem="NJG-Xi-QER" firstAttribute="centerY" secondItem="4FC-IO-8DP" secondAttribute="centerY" id="GwH-rB-UFQ"/>
-                                    <constraint firstItem="NJG-Xi-QER" firstAttribute="centerX" secondItem="4FC-IO-8DP" secondAttribute="centerX" constant="-95" id="JMJ-So-c2X"/>
-                                    <constraint firstAttribute="trailing" secondItem="TIK-XQ-brg" secondAttribute="trailing" constant="35.333333333333371" id="O16-e2-dKv"/>
-                                    <constraint firstAttribute="trailing" secondItem="NJG-Xi-QER" secondAttribute="trailing" constant="223.66666666666666" id="RGs-lr-QHJ"/>
                                     <constraint firstItem="5nB-7n-leX" firstAttribute="centerY" secondItem="euo-F8-83y" secondAttribute="centerY" id="er3-vl-834"/>
-                                    <constraint firstItem="TIK-XQ-brg" firstAttribute="centerY" secondItem="4FC-IO-8DP" secondAttribute="centerY" id="gYY-zz-ILY"/>
-                                    <constraint firstItem="TIK-XQ-brg" firstAttribute="leading" secondItem="4FC-IO-8DP" secondAttribute="leading" constant="225.33333333333334" id="hoo-7W-w3Z"/>
-                                    <constraint firstItem="TIK-XQ-brg" firstAttribute="centerX" secondItem="4FC-IO-8DP" secondAttribute="centerX" constant="95" id="ja6-qv-6QJ"/>
                                     <constraint firstItem="0If-Bj-ekb" firstAttribute="leading" secondItem="Wtt-iX-Zfn" secondAttribute="trailing" constant="8" symbolic="YES" id="k0l-fi-XZh"/>
                                     <constraint firstItem="euo-F8-83y" firstAttribute="leading" secondItem="5nB-7n-leX" secondAttribute="trailing" constant="8" symbolic="YES" id="nmD-QR-Qvr"/>
                                     <constraint firstItem="5nB-7n-leX" firstAttribute="top" secondItem="4FC-IO-8DP" secondAttribute="top" constant="8" id="oZo-gS-kZH"/>
@@ -284,8 +272,7 @@
                     <connections>
                         <outlet property="cityLbl" destination="Xwl-j0-ebc" id="jGO-NR-bKs"/>
                         <outlet property="humidityLbl" destination="HKu-Vw-k5W" id="a2i-CC-OQ6"/>
-                        <outlet property="sunriseLbl" destination="NJG-Xi-QER" id="UiG-Jv-DUX"/>
-                        <outlet property="sunsetLbl" destination="TIK-XQ-brg" id="UAH-Xo-vnM"/>
+                        <outlet property="sunriseLbl" destination="0jw-4i-jLx" id="gwK-bT-wDi"/>
                         <outlet property="tempHighLbl" destination="L0M-Wg-TGU" id="oDs-yh-9rh"/>
                         <outlet property="tempLbl" destination="NCQ-WL-Qa9" id="Qk7-0s-1ed"/>
                         <outlet property="weatherDescriptionLbl" destination="iG6-BG-MlB" id="rGm-mb-FYd"/>
@@ -294,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rhc-4K-Rb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1550" y="33"/>
+            <point key="canvasLocation" x="1549.5999999999999" y="32.512315270935964"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A5v-G9-ygI">

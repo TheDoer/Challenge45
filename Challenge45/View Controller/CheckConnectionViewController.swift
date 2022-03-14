@@ -16,14 +16,12 @@ class CheckConnectionViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBAction func retryButtonPressed(_ sender: Any) {
+        
+        let controller = DailyWeatherViewController.instantiate()
+        navigationController?.pushViewController(controller, animated: true)
+        
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
 }

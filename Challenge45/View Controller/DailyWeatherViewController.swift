@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Reachability
+import ProgressHUD
+
 
 class DailyWeatherViewController: UIViewController {
+    var reachability: Reachability?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,20 +24,46 @@ class DailyWeatherViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        fetchData()
+    }
+    
+    
+    func fetchData(){
+        
+        ProgressHUD.show()
+        
+        do {
+            self.reachability = try Reachability.init()
+        } catch {
+            print("Unable to Start Notifier")
+            
+        }
+        
+        if ((reachability!.connection) != .unavailable) {
+            
         NetworkService.shared.fetchDailyWeatherData { [weak self] (result) in
             switch result {
                 case .success(let dailyWeatherData):
-                    print("It was successful")
+                    ProgressHUD.dismiss()
                     self?.allDailyWeather = dailyWeatherData
-                    //self?.allDailyWeather.append(contentsOf: dailyWeatherData)
-                    //print("All Data: \(self?.allDailyWeather)")
                     self?.tableView.reloadData()
+                    
                 case .failure(let error):
-                    print("The error is: \(error.localizedDescription)")
+                    ProgressHUD.showError(error.localizedDescription)
                     
             }
             
         }
+            
+        } else {
+            ProgressHUD.dismiss()
+            
+            let controller = CheckConnectionViewController.instantiate()
+            navigationController?.pushViewController(controller, animated: true)
+ 
+        }
+    
+        
     }
     
     
