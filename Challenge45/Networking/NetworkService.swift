@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import FileProvider
 
 struct NetworkService {
     
@@ -14,19 +13,24 @@ struct NetworkService {
     
     private init() {}
     
-    func myfirstRequest(){
+    func fetchDailyWeatherData(completion: @escaping (Result<[List],Error>) -> Void){
+        request(route: .fetchDailyWeather, method: .get, parameters: nil, completion: completion)
         
-        request(route: .dailyWeather, method: .get, type: String.self, completion: { _ in })
-       
+        
     }
     
+//    func myfirstRequest(completion: @escaping(Result<[List], Error>) -> Void ){
+//
+//        request(route: .fetchDailyWeather, method: .get, completion: completion)
+//
+//    }
     
     
-    private func request<T: Codable>(route: Route,
+    
+    private func request<T: Decodable>(route: Route,
                                      method: Method,
                                      parameters: [String: Any]? = nil,
-                                     type: T.Type,
-                                     completion: (Result<T, Error>) -> Void) {
+                                     completion: @escaping (Result<T, Error>) -> Void) {
        guard let request = createRequest(route: route, method: method, parameters: parameters) else {
             completion(.failure(AppError.unknownError))
             return
@@ -35,17 +39,53 @@ struct NetworkService {
             var result: Result<Data, Error>?
             if let data = data {
                 result = .success(data)
-                let responseString = String(data: data, encoding: .utf8) ?? "Could not stringify the data"
-                print("The response  is :\n\(responseString)")
+                _ = String(data: data, encoding: .utf8) ?? "Could not stringify the data"
+                //print("The response  is :\n\(responseString)")
             } else if let error = error {
                 result = .failure(error)
                 print("The error is: \(error.localizedDescription)")
             }
             DispatchQueue.main.async {
-             //TODO
+                self.handleResponse(result: result, completion: completion)
             }
             
         }.resume()
+        
+    }
+    
+    //This function helps us to decode the data
+    private func handleResponse<T: Decodable>(result: Result<Data, Error>?,
+                                              completion: (Result<T, Error>) -> Void) {
+        guard let result = result else {
+            completion(.failure(AppError.unknownError))
+            return
+        }
+        
+        switch result {
+            case .success(let data):
+                let decoder = JSONDecoder()
+                guard let response = try? decoder.decode(APiResponse<T>.self, from: data) else {
+                    completion(.failure(AppError.errorDecoding))
+                    return
+                }
+                
+                if let error = response.error {
+                    completion(.failure(AppError.serverError(error)))
+                    return
+                }
+                
+                if let decodedData = response.list {
+                    completion(.success(decodedData))
+                    
+                } else {
+                    completion(.failure(AppError.unknownError))
+                }
+                
+            case .failure(let error):
+                completion(.failure(error))
+                
+        }
+
         
     }
     
