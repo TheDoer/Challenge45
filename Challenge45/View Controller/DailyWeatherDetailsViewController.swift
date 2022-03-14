@@ -38,11 +38,13 @@ class DailyWeatherDetailsViewController: UIViewController {
         windLbl.text = "\(dailyWeatherDetails?.speed ?? 0.0) km/h"
         humidityLbl.text = "\(dailyWeatherDetails?.humidity ?? 0) %"
         
-        
-        
-        
-        
+        sunriseLbl.text = getTimeForDate(Date(timeIntervalSince1970: Double(dailyWeatherDetails?.sunrise ?? 0)))
+        sunsetLbl.text = getTimeForDate(Date(timeIntervalSince1970: Double(dailyWeatherDetails?.sunset ?? 0)))
     }
+    
+    
+    
+    
     
 
 }
