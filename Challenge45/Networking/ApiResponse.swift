@@ -7,12 +7,8 @@
 
 import Foundation
 
-import Foundation
-
 struct APiResponse<T: Decodable>: Decodable {
-    let status: Int
-    let message: String?
-    let data: T?
+    let list: T?
     let error: String?
     
 }
