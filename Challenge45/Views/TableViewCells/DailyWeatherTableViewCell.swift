@@ -22,20 +22,36 @@ class DailyWeatherTableViewCell: UITableViewCell {
         weatherTemperature.text = "\(dailyWeatherCellData.temp?.day ?? 0.0 )°"
         let weatherIcon = dailyWeatherCellData.weather![0].icon
         
-        if (weatherIcon == "04d"){
-                        self.weatherImageView.image = UIImage(named: "night")
+       
+        
+        if (weatherIcon == "01d"){
+            self.weatherImageView.image = UIImage(named: "clear sky")
+            }
+          else if (weatherIcon == "02d") {
+            self.weatherImageView.image = UIImage(named: "few clouds")
                     }
-                    else if (weatherIcon == "10d") {
-                        self.weatherImageView.image = UIImage(named: "cloud-lightining")
+            else if (weatherIcon == "03d") {
+                        self.weatherImageView.image = UIImage(named: "scattered clouds")
                     }
-                    else if (weatherIcon == "03d") {
-                        self.weatherImageView.image = UIImage(named: "cloud-umbrella")
-                    }
+        else if (weatherIcon == "04d") {
+                    self.weatherImageView.image = UIImage(named: "broken clouds")
+                }
+        else if (weatherIcon == "09d") {
+                    self.weatherImageView.image = UIImage(named: "shower rain")
+                }
+        else if (weatherIcon == "10d") {
+                    self.weatherImageView.image = UIImage(named: "rain")
+                }
+        else if (weatherIcon == "11d") {
+                    self.weatherImageView.image = UIImage(named: "thunderstorm")
+                }
+
                     else {
         
-                        self.weatherImageView.image = UIImage(named: "wind")
+                        self.weatherImageView.image = UIImage(named: "thunderstorm")
         
                     }
+    
        
         
     }
