@@ -14,4 +14,24 @@ extension Double {
     }
 }
 
+func getDayForDate(_ date: Date?) -> String {
+    guard let inputDate = date else {
+        return ""
+    }
+    
+    let formatter = DateFormatter()
+    formatter.dateFormat = "EEEE, MMM d" //Saturday, Mar 12
+    return formatter.string(from: inputDate)
+}
 
+func getTimeForDate(_ date: Date?) -> String {
+    guard let inputDate = date else {
+        return ""
+    }
+    
+    let formatter = DateFormatter()
+    formatter.dateFormat = "EEEE, MMM d" //Saturday, Mar 12
+    return formatter.string(from: inputDate)
+    
+    
+}
