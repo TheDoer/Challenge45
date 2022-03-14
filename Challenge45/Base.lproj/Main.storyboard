@@ -12,7 +12,7 @@
         <!--Platform45-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DailyWeatherViewController" customModule="Challenge45" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DailyWeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DailyWeatherViewController" customModule="Challenge45" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="831.20000000000005" y="32.512315270935964"/>
+            <point key="canvasLocation" x="711" y="33"/>
         </scene>
         <!--Daily Weather Details View Controller-->
         <scene sceneID="F8o-dx-qDS">
@@ -243,6 +243,7 @@
                                     <constraint firstItem="euo-F8-83y" firstAttribute="top" secondItem="4FC-IO-8DP" secondAttribute="top" constant="13" id="0dp-Bf-Vmp"/>
                                     <constraint firstAttribute="trailing" secondItem="0If-Bj-ekb" secondAttribute="trailing" constant="8" id="4CS-MH-ffM"/>
                                     <constraint firstItem="0If-Bj-ekb" firstAttribute="top" secondItem="4FC-IO-8DP" secondAttribute="top" constant="8" id="7vk-Dk-C4p"/>
+                                    <constraint firstItem="NJG-Xi-QER" firstAttribute="leading" secondItem="4FC-IO-8DP" secondAttribute="leading" constant="33.666666666666671" id="8J7-P6-lTQ"/>
                                     <constraint firstItem="Wtt-iX-Zfn" firstAttribute="centerY" secondItem="0If-Bj-ekb" secondAttribute="centerY" id="94o-FJ-dWg"/>
                                     <constraint firstItem="Wtt-iX-Zfn" firstAttribute="top" secondItem="4FC-IO-8DP" secondAttribute="top" constant="13" id="AZw-bW-Bcx"/>
                                     <constraint firstItem="5nB-7n-leX" firstAttribute="leading" secondItem="4FC-IO-8DP" secondAttribute="leading" constant="8" id="GW7-dP-1xB"/>
@@ -252,6 +253,7 @@
                                     <constraint firstAttribute="trailing" secondItem="NJG-Xi-QER" secondAttribute="trailing" constant="223.66666666666666" id="RGs-lr-QHJ"/>
                                     <constraint firstItem="5nB-7n-leX" firstAttribute="centerY" secondItem="euo-F8-83y" secondAttribute="centerY" id="er3-vl-834"/>
                                     <constraint firstItem="TIK-XQ-brg" firstAttribute="centerY" secondItem="4FC-IO-8DP" secondAttribute="centerY" id="gYY-zz-ILY"/>
+                                    <constraint firstItem="TIK-XQ-brg" firstAttribute="leading" secondItem="4FC-IO-8DP" secondAttribute="leading" constant="225.33333333333334" id="hoo-7W-w3Z"/>
                                     <constraint firstItem="TIK-XQ-brg" firstAttribute="centerX" secondItem="4FC-IO-8DP" secondAttribute="centerX" constant="95" id="ja6-qv-6QJ"/>
                                     <constraint firstItem="0If-Bj-ekb" firstAttribute="leading" secondItem="Wtt-iX-Zfn" secondAttribute="trailing" constant="8" symbolic="YES" id="k0l-fi-XZh"/>
                                     <constraint firstItem="euo-F8-83y" firstAttribute="leading" secondItem="5nB-7n-leX" secondAttribute="trailing" constant="8" symbolic="YES" id="nmD-QR-Qvr"/>
@@ -292,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rhc-4K-Rb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551" y="58"/>
+            <point key="canvasLocation" x="1550" y="33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A5v-G9-ygI">
@@ -312,11 +314,92 @@
             </objects>
             <point key="canvasLocation" x="-111.2" y="32.512315270935964"/>
         </scene>
+        <!--Check Connection View Controller-->
+        <scene sceneID="uIH-DL-LW3">
+            <objects>
+                <viewController storyboardIdentifier="CheckConnectionViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kp2-pC-UYj" customClass="CheckConnectionViewController" customModule="Challenge45" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7YX-JU-Q4L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No connection detected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wle-sh-ryE">
+                                <rect key="frame" x="44.333333333333343" y="209" width="286.33333333333326" height="34.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your internet connection and try again below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU3-bM-1sH">
+                                <rect key="frame" x="20" y="478.66666666666669" width="335" height="49.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Dh-B6-qAZ">
+                                <rect key="frame" x="30" y="74" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XI2-ja-yy3"/>
+                                    <constraint firstAttribute="height" constant="100" id="j4x-T3-Y5X"/>
+                                </constraints>
+                                <imageReference key="image" image="rain" symbolScale="small" renderingMode="hierarchical">
+                                    <hierarchicalColors>
+                                        <color systemColor="labelColor"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVf-Ce-goa">
+                                <rect key="frame" x="37.666666666666657" y="563" width="300" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.75219622760000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Fw6-sB-vbT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="RETRY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="retryButtonPressed:" destination="kp2-pC-UYj" eventType="touchUpInside" id="Wnk-Jr-lUm"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi.exclamationmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ocu-xN-vvM">
+                                <rect key="frame" x="77.666666666666686" y="260" width="220" height="196.66666666666663"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="MK1-E5-nz8"/>
+                                    <constraint firstAttribute="width" constant="220" id="evU-bf-N8y"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4QG-QN-e2v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wle-sh-ryE" firstAttribute="centerX" secondItem="7YX-JU-Q4L" secondAttribute="centerX" id="5Nc-bw-ucn"/>
+                            <constraint firstItem="6Dh-B6-qAZ" firstAttribute="top" secondItem="4QG-QN-e2v" secondAttribute="top" constant="30" id="HBP-LI-h6Z"/>
+                            <constraint firstItem="nVf-Ce-goa" firstAttribute="centerX" secondItem="7YX-JU-Q4L" secondAttribute="centerX" id="KxZ-jq-Ug5"/>
+                            <constraint firstItem="6Dh-B6-qAZ" firstAttribute="leading" secondItem="4QG-QN-e2v" secondAttribute="leading" constant="30" id="SZy-Nf-uHM"/>
+                            <constraint firstItem="wle-sh-ryE" firstAttribute="top" secondItem="6Dh-B6-qAZ" secondAttribute="bottom" constant="35" id="SeX-iW-Ph5"/>
+                            <constraint firstItem="nVf-Ce-goa" firstAttribute="width" secondItem="7YX-JU-Q4L" secondAttribute="width" multiplier="0.8" id="Siz-xQ-c4f"/>
+                            <constraint firstItem="4QG-QN-e2v" firstAttribute="trailing" secondItem="DU3-bM-1sH" secondAttribute="trailing" constant="20" id="cFj-yd-hYk"/>
+                            <constraint firstItem="ocu-xN-vvM" firstAttribute="centerX" secondItem="7YX-JU-Q4L" secondAttribute="centerX" id="cSp-Ed-fw8"/>
+                            <constraint firstItem="DU3-bM-1sH" firstAttribute="top" secondItem="ocu-xN-vvM" secondAttribute="bottom" constant="20" id="lYP-lv-LuX"/>
+                            <constraint firstItem="ocu-xN-vvM" firstAttribute="top" secondItem="wle-sh-ryE" secondAttribute="bottom" constant="15" id="nuG-RN-wRl"/>
+                            <constraint firstItem="DU3-bM-1sH" firstAttribute="leading" secondItem="4QG-QN-e2v" secondAttribute="leading" constant="20" id="qaz-W1-oNq"/>
+                            <constraint firstItem="nVf-Ce-goa" firstAttribute="top" secondItem="DU3-bM-1sH" secondAttribute="bottom" constant="35" id="swx-wm-fCe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DlK-GK-ik3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2407" y="33"/>
+        </scene>
     </scenes>
     <resources>
         <image name="humidity" catalog="system" width="128" height="98"/>
+        <image name="rain" width="120" height="120"/>
         <image name="sunrise" catalog="system" width="128" height="97"/>
         <image name="sunset" catalog="system" width="128" height="97"/>
+        <image name="wifi.exclamationmark" catalog="system" width="128" height="96"/>
         <image name="wind" catalog="system" width="128" height="103"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -329,6 +412,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
